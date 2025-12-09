@@ -1,2 +1,2 @@
 # Load Zephyr board Kconfig descriptions.
-osource "/home/younesam/zephyrproject/zephyr/boards/espressif/esp32c3_devkitc/Kconfig"
+osource "/home/younesam/zephyrproject/zephyr/boards/espressif/esp32_devkitc/Kconfig"

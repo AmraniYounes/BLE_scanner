@@ -7,16 +7,6 @@
  */
 
 /* Symbol declarations */
-extern void * const z_impl_atomic_add;
-extern void * const z_impl_atomic_and;
-extern void * const z_impl_atomic_cas;
-extern void * const z_impl_atomic_nand;
-extern void * const z_impl_atomic_or;
-extern void * const z_impl_atomic_ptr_cas;
-extern void * const z_impl_atomic_ptr_set;
-extern void * const z_impl_atomic_set;
-extern void * const z_impl_atomic_sub;
-extern void * const z_impl_atomic_xor;
 extern void * const z_impl_device_deinit;
 extern void * const z_impl_device_get_binding;
 extern void * const z_impl_device_get_by_dt_nodelabel;
@@ -164,7 +154,8 @@ extern void * const z_impl_uart_rx_enable_u16;
 extern void * const z_impl_uart_tx;
 extern void * const z_impl_uart_tx_abort;
 extern void * const z_impl_uart_tx_u16;
-extern void * const z_impl_user_fault;
+extern void * const z_impl_xtensa_user_fault;
+extern void * const z_impl_z_errno;
 extern void * const z_impl_z_log_msg_simple_create_0;
 extern void * const z_impl_z_log_msg_simple_create_1;
 extern void * const z_impl_z_log_msg_simple_create_2;
@@ -177,16 +168,6 @@ extern void * const z_impl_zephyr_read_stdin;
 extern void * const z_impl_zephyr_write_stdout;
 
 /* Exported symbols */
-EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_atomic_add);
-EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_atomic_and);
-EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_atomic_cas);
-EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_atomic_nand);
-EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_atomic_or);
-EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_atomic_ptr_cas);
-EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_atomic_ptr_set);
-EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_atomic_set);
-EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_atomic_sub);
-EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_atomic_xor);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_device_deinit);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_device_get_binding);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_device_get_by_dt_nodelabel);
@@ -334,7 +315,8 @@ EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_uart_rx_enable_u16);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_uart_tx);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_uart_tx_abort);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_uart_tx_u16);
-EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_user_fault);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_xtensa_user_fault);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_z_errno);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_z_log_msg_simple_create_0);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_z_log_msg_simple_create_1);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_z_log_msg_simple_create_2);

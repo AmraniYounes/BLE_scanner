@@ -1,7 +1,5 @@
 #include <zephyr/sys/printk.h>
 #include <zephyr/bluetooth/bluetooth.h>
-#include <zephyr/bluetooth/controller.h>
-#include <zephyr/bluetooth/addr.h>
 
 
 static void init_callback(int err);
@@ -9,24 +7,39 @@ static void scan_callback(const bt_addr_le_t *, int8_t,
                           uint8_t, struct net_buf_simple *);
 
 
-const struct bt_le_scan_param obs_scan_params = {
+const struct bt_le_scan_param scan_params = {
     .type = BT_LE_SCAN_TYPE_ACTIVE,
     .options = BT_LE_SCAN_OPT_NONE,
-    .interval = 0x0060,
-    .window = 0x0030
+    .interval   = 0x0010,
+	.window     = 0x0010,
 };
 
-
-
+static uint8_t mfg_data[] = { 0xff, 0xff, 0x00 };
+static const struct bt_data ad[] = {
+	BT_DATA(BT_DATA_MANUFACTURER_DATA, mfg_data, 3),
+};
 
 int main(void)
 {
-    // Set public address for Bluetooth controllera
+    // Set public address for Bluetooth controller
     const uint8_t public_address[6] = {0xFF, 0xFF, 0xFF, 0x00, 0xEE, 0xEE};
     bt_ctlr_set_public_addr(public_address);	
 
     // init BLE
-    int err = bt_enable(init_callback);
+    int err = bt_enable(NULL);
+    if(err)
+    {
+        printk("Bluetooth init failed (error code: %d)\n", err);
+        return -1;
+    }
+    
+
+    err = bt_le_scan_start(&scan_params, scan_callback);
+    if(err)
+    {
+        printk("Scanning failed (error code: %d)\n", err);
+        return -1;
+    }
 
     
 
@@ -39,25 +52,9 @@ int main(void)
 
 
 
-static void init_callback(int err)
-{
-    if(err)
-    {
-        printk("Bluetooth init faild (err %d)\n", err);
-    }
-    printk("Bluetooth is ready!\n");
-
-    // 1st task: scan network if esp32 button is pressed
-    if(bt_le_scan_start(&obs_scan_params, scan_callback) != 0)
-    {
-        printk("Error starting the observer scan!\n");
-    }
-}
 
 static void scan_callback(const bt_addr_le_t *public_address, int8_t rssi, uint8_t adv_type
                                                                 , struct net_buf_simple *buf)
 {
-    char addr_str[BT_ADDR_LE_STR_LEN];
-    bt_addr_le_to_str(public_address, addr_str, sizeof(addr_str));
-    printk("Device found: %s (RSSI %d)\n", addr_str, rssi);
+    mfg_data[2]++;
 }

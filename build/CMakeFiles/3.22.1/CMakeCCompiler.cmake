@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "/home/younesam/zephyr-sdk-0.17.4/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcc")
+set(CMAKE_C_COMPILER "/home/younesam/zephyr-sdk-0.17.4/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-gcc")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "12.2.0")
@@ -21,11 +21,11 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "/home/younesam/zephyr-sdk-0.17.4/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-ar")
-set(CMAKE_C_COMPILER_AR "/home/younesam/zephyr-sdk-0.17.4/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcc-ar")
-set(CMAKE_RANLIB "/home/younesam/zephyr-sdk-0.17.4/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-ranlib")
-set(CMAKE_C_COMPILER_RANLIB "/home/younesam/zephyr-sdk-0.17.4/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcc-ranlib")
-set(CMAKE_LINKER "/home/younesam/zephyr-sdk-0.17.4/riscv64-zephyr-elf/riscv64-zephyr-elf/bin/ld.bfd")
+set(CMAKE_AR "/home/younesam/zephyr-sdk-0.17.4/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-ar")
+set(CMAKE_C_COMPILER_AR "/home/younesam/zephyr-sdk-0.17.4/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-gcc-ar")
+set(CMAKE_RANLIB "/home/younesam/zephyr-sdk-0.17.4/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-ranlib")
+set(CMAKE_C_COMPILER_RANLIB "/home/younesam/zephyr-sdk-0.17.4/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-gcc-ranlib")
+set(CMAKE_LINKER "/home/younesam/zephyr-sdk-0.17.4/xtensa-espressif_esp32_zephyr-elf/xtensa-espressif_esp32_zephyr-elf/bin/ld.bfd")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCC 1)
 set(CMAKE_C_COMPILER_LOADED 1)

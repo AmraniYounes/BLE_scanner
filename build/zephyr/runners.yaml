@@ -11,12 +11,12 @@ debug-runner: openocd
 
 # Common runner configuration values.
 config:
-  board_dir: /home/younesam/zephyrproject/zephyr/boards/espressif/esp32c3_devkitc
+  board_dir: /home/younesam/zephyrproject/zephyr/boards/espressif/esp32_devkitc
   # Build outputs:
   elf_file: zephyr.elf
   bin_file: zephyr.bin
   # Host tools:
-  gdb: /home/younesam/zephyr-sdk-0.17.4/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gdb-py
+  gdb: /home/younesam/zephyr-sdk-0.17.4/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-gdb-py
 
 # Runner specific arguments
 args:
@@ -40,8 +40,8 @@ args:
   esp32:
     - --esp-monitor-baud=115200
     - --esp-idf-path=/home/younesam/zephyrproject/modules/hal/espressif
-    - --esp-app-address=0x0
+    - --esp-app-address=0x1000
     - --esp-flash-size=4MB
-    - --esp-flash-freq=80m
+    - --esp-flash-freq=40m
     - --esp-flash-mode=dio
     - --esp-idf-path=/home/younesam/zephyrproject/modules/hal/espressif

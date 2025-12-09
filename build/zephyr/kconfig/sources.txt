@@ -4,7 +4,7 @@
 /home/younesam/zephyrproject/BLE_scanner/build/Kconfig/arch/Kconfig
 /home/younesam/zephyrproject/BLE_scanner/build/Kconfig/boards/Kconfig
 /home/younesam/zephyrproject/BLE_scanner/build/Kconfig/boards/Kconfig.defconfig
-/home/younesam/zephyrproject/BLE_scanner/build/Kconfig/boards/Kconfig.esp32c3_devkitc
+/home/younesam/zephyrproject/BLE_scanner/build/Kconfig/boards/Kconfig.esp32_devkitc
 /home/younesam/zephyrproject/BLE_scanner/build/Kconfig/soc/Kconfig
 /home/younesam/zephyrproject/BLE_scanner/build/Kconfig/soc/Kconfig.defconfig
 /home/younesam/zephyrproject/BLE_scanner/build/Kconfig/soc/Kconfig.soc
@@ -66,8 +66,8 @@
 /home/younesam/zephyrproject/zephyr/arch/xtensa/Kconfig
 /home/younesam/zephyrproject/zephyr/boards/Kconfig
 /home/younesam/zephyrproject/zephyr/boards/Kconfig.v2
-/home/younesam/zephyrproject/zephyr/boards/espressif/esp32c3_devkitc/Kconfig
-/home/younesam/zephyrproject/zephyr/boards/espressif/esp32c3_devkitc/Kconfig.esp32c3_devkitc
+/home/younesam/zephyrproject/zephyr/boards/espressif/esp32_devkitc/Kconfig
+/home/younesam/zephyrproject/zephyr/boards/espressif/esp32_devkitc/Kconfig.esp32_devkitc
 /home/younesam/zephyrproject/zephyr/boards/shields/abrobot_esp32c3_oled/Kconfig.shield
 /home/younesam/zephyrproject/zephyr/boards/shields/adafruit_24lc32/Kconfig.shield
 /home/younesam/zephyrproject/zephyr/boards/shields/adafruit_2_8_tft_touch_v2/Kconfig.defconfig

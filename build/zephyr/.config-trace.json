@@ -41,9 +41,17 @@
     "2048",
     "default",
     [
-      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32c3/Kconfig.defconfig",
+      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32/Kconfig.defconfig",
       16
     ]
+  ],
+  [
+    "CONFIG_FPU",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_BT_RX_STACK_SIZE",
@@ -63,8 +71,8 @@
     "y",
     "assign",
     [
-      "/home/younesam/zephyrproject/zephyr/boards/espressif/esp32c3_devkitc/esp32c3_devkitc_defconfig",
-      4
+      "/home/younesam/zephyrproject/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu_defconfig",
+      5
     ]
   ],
   [
@@ -116,47 +124,36 @@
     null
   ],
   [
-    "CONFIG_NUM_IRQS",
-    "n",
-    "int",
-    "32",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32c3/Kconfig.defconfig",
-      7
-    ]
-  ],
-  [
     "CONFIG_SYS_CLOCK_HW_CYCLES_PER_SEC",
     "y",
     "int",
-    "16000000",
+    "240000000",
     "default",
     [
       "/home/younesam/zephyrproject/zephyr/soc/espressif/common/Kconfig.defconfig",
-      34
+      79
     ]
   ],
   [
     "CONFIG_FLASH_SIZE",
-    "y",
+    "n",
     "int",
     "4194304",
     "default",
     [
-      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32c3/Kconfig.defconfig",
-      10
+      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32/Kconfig.defconfig",
+      7
     ]
   ],
   [
     "CONFIG_FLASH_BASE_ADDRESS",
-    "y",
+    "n",
     "hex",
     "0x0",
     "default",
     [
-      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32c3/Kconfig.defconfig",
-      13
+      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32/Kconfig.defconfig",
+      10
     ]
   ],
   [
@@ -185,18 +182,18 @@
     "y",
     "select",
     [
-      "SOC_SERIES_ESP32C3 && SOC_FAMILY_ESPRESSIF_ESP32"
+      "SOC_SERIES_ESP32 && SOC_FAMILY_ESPRESSIF_ESP32"
     ]
   ],
   [
     "CONFIG_IDLE_STACK_SIZE",
     "y",
     "int",
-    "512",
+    "1024",
     "default",
     [
       "/home/younesam/zephyrproject/zephyr/kernel/Kconfig",
-      173
+      172
     ]
   ],
   [
@@ -206,19 +203,19 @@
     "2048",
     "default",
     [
-      "/home/younesam/zephyrproject/zephyr/soc/espressif/common/Kconfig.defconfig",
-      22
+      "/home/younesam/zephyrproject/zephyr/kernel/Kconfig",
+      185
     ]
   ],
   [
     "CONFIG_SYS_CLOCK_TICKS_PER_SEC",
     "y",
     "int",
-    "1000",
+    "10000",
     "default",
     [
-      "/home/younesam/zephyrproject/zephyr/soc/espressif/common/Kconfig.defconfig",
-      37
+      "/home/younesam/zephyrproject/zephyr/kernel/Kconfig",
+      806
     ]
   ],
   [
@@ -255,31 +252,12 @@
     ]
   ],
   [
-    "CONFIG_RISCV_SOC_INTERRUPT_INIT",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
     "CONFIG_XIP",
     "y",
     "bool",
     null,
     "unset",
     null
-  ],
-  [
-    "CONFIG_TEST_EXTRA_STACK_SIZE",
-    "n",
-    "int",
-    "1536",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/arch/riscv/Kconfig",
-      490
-    ]
   ],
   [
     "CONFIG_HAS_FLASH_LOAD_OFFSET",
@@ -347,14 +325,6 @@
     null
   ],
   [
-    "CONFIG_RISCV_PMP",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
     "CONFIG_MULTI_LEVEL_INTERRUPTS",
     "y",
     "bool",
@@ -409,53 +379,7 @@
     null
   ],
   [
-    "CONFIG_INCLUDE_RESET_VECTOR",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
     "CONFIG_GEN_IRQ_VECTOR_TABLE",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_RISCV_GENERIC_TOOLCHAIN",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/arch/riscv/Kconfig",
-      287
-    ]
-  ],
-  [
-    "CONFIG_RV_BOOT_HART",
-    "y",
-    "int",
-    "0",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/arch/riscv/Kconfig",
-      330
-    ]
-  ],
-  [
-    "CONFIG_RISCV_SOC_CONTEXT_SAVE",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_RISCV_SOC_OFFSETS",
     "y",
     "bool",
     null,
@@ -469,7 +393,7 @@
     "y",
     "select",
     [
-      "SOC_SERIES_ESP32C3 && SOC_FAMILY_ESPRESSIF_ESP32"
+      "SOC_SERIES_ESP32 && SOC_FAMILY_ESPRESSIF_ESP32"
     ]
   ],
   [
@@ -480,18 +404,7 @@
     "default",
     [
       "/home/younesam/zephyrproject/zephyr/soc/espressif/common/Kconfig.defconfig",
-      7
-    ]
-  ],
-  [
-    "CONFIG_RISCV_MCAUSE_EXCEPTION_MASK",
-    "n",
-    "hex",
-    "0x7FFFFFFF",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/arch/riscv/Kconfig",
-      281
+      67
     ]
   ],
   [
@@ -517,7 +430,7 @@
     "CONFIG_FLASH_LOAD_OFFSET",
     "y",
     "hex",
-    "0x0",
+    "0x1000",
     "default",
     [
       "/home/younesam/zephyrproject/zephyr/soc/espressif/Kconfig.defconfig",
@@ -596,8 +509,8 @@
     "y",
     "assign",
     [
-      "/home/younesam/zephyrproject/zephyr/boards/espressif/esp32c3_devkitc/esp32c3_devkitc_defconfig",
-      6
+      "/home/younesam/zephyrproject/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu_defconfig",
+      8
     ]
   ],
   [
@@ -615,6 +528,36 @@
     null,
     "unset",
     null
+  ],
+  [
+    "CONFIG_SMP",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_XTENSA_TIMER",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/younesam/zephyrproject/zephyr/drivers/timer/Kconfig.xtensa",
+      9
+    ]
+  ],
+  [
+    "CONFIG_XTENSA_CCOUNT_HZ",
+    "y",
+    "int",
+    "240000000",
+    "default",
+    [
+      "/home/younesam/zephyrproject/zephyr/soc/espressif/common/Kconfig.defconfig",
+      82
+    ]
   ],
   [
     "CONFIG_CACHE",
@@ -652,17 +595,6 @@
     null
   ],
   [
-    "CONFIG_RISCV_RESERVED_IRQ_ISR_TABLES_OFFSET",
-    "n",
-    "int",
-    "0",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/arch/riscv/Kconfig",
-      314
-    ]
-  ],
-  [
     "CONFIG_ARCH_SW_ISR_TABLE_ALIGN",
     "y",
     "int",
@@ -672,14 +604,6 @@
       "/home/younesam/zephyrproject/zephyr/arch/Kconfig",
       581
     ]
-  ],
-  [
-    "CONFIG_RISCV_ALWAYS_SWITCH_THROUGH_ECALL",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
   ],
   [
     "CONFIG_LOG_DOMAIN_NAME",
@@ -704,11 +628,11 @@
     "CONFIG_LOG_PROCESS_THREAD_STACK_SIZE",
     "y",
     "int",
-    "768",
+    "1024",
     "default",
     [
       "/home/younesam/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
-      91
+      89
     ]
   ],
   [
@@ -747,14 +671,30 @@
     null
   ],
   [
+    "CONFIG_XTENSA_SMALL_VECTOR_TABLE_ENTRY",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_XTENSA_USE_CORE_CRT1",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
     "CONFIG_CONSOLE",
     "y",
     "bool",
     "y",
     "assign",
     [
-      "/home/younesam/zephyrproject/zephyr/boards/espressif/esp32c3_devkitc/esp32c3_devkitc_defconfig",
-      3
+      "/home/younesam/zephyrproject/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu_defconfig",
+      4
     ]
   ],
   [
@@ -777,14 +717,23 @@
     ]
   ],
   [
-    "CONFIG_ATOMIC_OPERATIONS_C",
+    "CONFIG_SOC_TOOLCHAIN_NAME",
     "n",
-    "bool",
-    "y",
-    "select",
+    "string",
+    "espressif_esp32",
+    "default",
     [
-      "RISCV && !RISCV_ISA_EXT_A"
+      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32/Kconfig.soc",
+      170
     ]
+  ],
+  [
+    "CONFIG_XTENSA_RESET_VECTOR",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_GEN_SW_ISR_TABLE",
@@ -793,8 +742,8 @@
     "y",
     "default",
     [
-      "/home/younesam/zephyrproject/zephyr/soc/espressif/common/Kconfig.defconfig",
-      10
+      "/home/younesam/zephyrproject/zephyr/arch/Kconfig",
+      570
     ]
   ],
   [
@@ -828,37 +777,23 @@
     ]
   ],
   [
-    "CONFIG_ARCH_IRQ_VECTOR_TABLE_ALIGN",
-    "n",
-    "int",
-    "256",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/arch/riscv/Kconfig",
-      499
-    ]
-  ],
-  [
-    "CONFIG_RISCV_TRAP_HANDLER_ALIGNMENT",
+    "CONFIG_XTENSA_TIMER_ID",
     "y",
     "int",
-    "4",
+    "0",
     "default",
     [
-      "/home/younesam/zephyrproject/zephyr/arch/riscv/Kconfig",
-      504
+      "/home/younesam/zephyrproject/zephyr/drivers/timer/Kconfig.xtensa",
+      17
     ]
   ],
   [
-    "CONFIG_XTAL_FREQ_HZ",
-    "n",
-    "int",
-    "40000000",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/soc/espressif/common/Kconfig.defconfig",
-      29
-    ]
+    "CONFIG_XTENSA_RPO_CACHE",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_SOC_FLASH_ESP32",
@@ -868,7 +803,7 @@
     "default",
     [
       "/home/younesam/zephyrproject/zephyr/soc/espressif/common/Kconfig.defconfig",
-      43
+      76
     ]
   ],
   [
@@ -911,7 +846,7 @@
   ],
   [
     "CONFIG_MULTITHREADING",
-    "y",
+    "n",
     "bool",
     "y",
     "default",
@@ -1080,6 +1015,28 @@
     ]
   ],
   [
+    "CONFIG_DT_HAS_ESPRESSIF_ESP32_PSRAM_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/younesam/zephyrproject/BLE_scanner/build/Kconfig/Kconfig.dts",
+      2443
+    ]
+  ],
+  [
+    "CONFIG_DT_HAS_ESPRESSIF_ESP32_SDHC_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/younesam/zephyrproject/BLE_scanner/build/Kconfig/Kconfig.dts",
+      2453
+    ]
+  ],
+  [
     "CONFIG_DT_HAS_ESPRESSIF_ESP32_SHA_ENABLED",
     "n",
     "bool",
@@ -1099,17 +1056,6 @@
     [
       "/home/younesam/zephyrproject/BLE_scanner/build/Kconfig/Kconfig.dts",
       2468
-    ]
-  ],
-  [
-    "CONFIG_DT_HAS_ESPRESSIF_ESP32_SYSTIMER_ENABLED",
-    "n",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/BLE_scanner/build/Kconfig/Kconfig.dts",
-      2473
     ]
   ],
   [
@@ -1135,17 +1081,6 @@
     ]
   ],
   [
-    "CONFIG_DT_HAS_ESPRESSIF_ESP32_USB_SERIAL_ENABLED",
-    "n",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/BLE_scanner/build/Kconfig/Kconfig.dts",
-      2513
-    ]
-  ],
-  [
     "CONFIG_DT_HAS_ESPRESSIF_ESP32_WATCHDOG_ENABLED",
     "n",
     "bool",
@@ -1168,14 +1103,14 @@
     ]
   ],
   [
-    "CONFIG_DT_HAS_ESPRESSIF_RISCV_ENABLED",
+    "CONFIG_DT_HAS_ESPRESSIF_XTENSA_LX6_ENABLED",
     "n",
     "bool",
     "y",
     "default",
     [
       "/home/younesam/zephyrproject/BLE_scanner/build/Kconfig/Kconfig.dts",
-      2538
+      2543
     ]
   ],
   [
@@ -1422,6 +1357,17 @@
     ]
   ],
   [
+    "CONFIG_ESP32_DPORT_DIS_INTERRUPT_LVL",
+    "n",
+    "int",
+    "5",
+    "default",
+    [
+      "/home/younesam/zephyrproject/modules/hal/espressif/zephyr/Kconfig",
+      16
+    ]
+  ],
+  [
     "CONFIG_FREERTOS_UNICORE",
     "n",
     "bool",
@@ -1433,36 +1379,69 @@
     ]
   ],
   [
+    "CONFIG_ESP_SYSTEM_SINGLE_CORE_MODE",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/younesam/zephyrproject/modules/hal/espressif/zephyr/Kconfig",
+      24
+    ]
+  ],
+  [
     "CONFIG_IDF_FIRMWARE_CHIP_ID",
     "n",
     "hex",
-    "0x0005",
+    "0x0000",
     "default",
     [
       "/home/younesam/zephyrproject/modules/hal/espressif/zephyr/Kconfig",
-      32
+      28
     ]
   ],
   [
-    "CONFIG_IDF_TARGET_ESP32C3",
+    "CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY",
     "n",
     "bool",
     "y",
     "default",
     [
       "/home/younesam/zephyrproject/modules/hal/espressif/zephyr/Kconfig",
-      66
+      38
     ]
   ],
   [
-    "CONFIG_ESP_TIMER_IMPL_SYSTIMER",
+    "CONFIG_SPIRAM_ALLOW_NOINIT_SEG_EXTERNAL_MEMORY",
     "n",
     "bool",
     "y",
     "default",
     [
       "/home/younesam/zephyrproject/modules/hal/espressif/zephyr/Kconfig",
-      83
+      44
+    ]
+  ],
+  [
+    "CONFIG_IDF_TARGET_ESP32",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/younesam/zephyrproject/modules/hal/espressif/zephyr/Kconfig",
+      50
+    ]
+  ],
+  [
+    "CONFIG_ESP_TIMER_IMPL_TG0_LAC",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/younesam/zephyrproject/modules/hal/espressif/zephyr/Kconfig",
+      78
     ]
   ],
   [
@@ -1480,11 +1459,11 @@
     "CONFIG_ESP_SLEEP_WAIT_FLASH_READY_EXTRA_DELAY",
     "y",
     "int",
-    "0",
+    "2000",
     "default",
     [
       "/home/younesam/zephyrproject/modules/hal/espressif/zephyr/Kconfig",
-      118
+      117
     ]
   ],
   [
@@ -3643,7 +3622,7 @@
     "y",
     "select",
     [
-      "SOC_SERIES_ESP32C3 && SOC_FAMILY_ESPRESSIF_ESP32"
+      "SOC_SERIES_ESP32 && SOC_FAMILY_ESPRESSIF_ESP32"
     ]
   ],
   [
@@ -3722,7 +3701,7 @@
     "CONFIG_BOARD",
     "n",
     "string",
-    "esp32c3_devkitc",
+    "esp32_devkitc",
     "default",
     [
       "/home/younesam/zephyrproject/zephyr/boards/Kconfig",
@@ -3744,7 +3723,7 @@
     "CONFIG_BOARD_TARGET",
     "n",
     "string",
-    "esp32c3_devkitc/esp32c3",
+    "esp32_devkitc/esp32/procpu",
     "default",
     [
       "/home/younesam/zephyrproject/zephyr/boards/Kconfig",
@@ -3760,7 +3739,7 @@
     null
   ],
   [
-    "CONFIG_BOARD_ESP32C3_DEVKITC",
+    "CONFIG_BOARD_ESP32_DEVKITC",
     "n",
     "bool",
     "y",
@@ -3771,7 +3750,7 @@
     ]
   ],
   [
-    "CONFIG_BOARD_ESP32C3_DEVKITC_ESP32C3",
+    "CONFIG_BOARD_ESP32_DEVKITC_ESP32_PROCPU",
     "n",
     "bool",
     "y",
@@ -3785,7 +3764,7 @@
     "CONFIG_BOARD_QUALIFIERS",
     "n",
     "string",
-    "esp32c3",
+    "esp32/procpu",
     "default",
     [
       "/home/younesam/zephyrproject/zephyr/boards/Kconfig.v2",
@@ -3799,7 +3778,7 @@
     "4096",
     "default",
     [
-      "/home/younesam/zephyrproject/zephyr/boards/espressif/esp32c3_devkitc/Kconfig",
+      "/home/younesam/zephyrproject/zephyr/boards/espressif/esp32_devkitc/Kconfig",
       6
     ]
   ],
@@ -3807,22 +3786,22 @@
     "CONFIG_SOC",
     "n",
     "string",
-    "esp32c3",
+    "esp32",
     "default",
     [
-      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32c3/Kconfig.soc",
-      56
+      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32/Kconfig.soc",
+      145
     ]
   ],
   [
     "CONFIG_SOC_SERIES",
     "n",
     "string",
-    "esp32c3",
+    "esp32",
     "default",
     [
-      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32c3/Kconfig.soc",
-      53
+      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32/Kconfig.soc",
+      142
     ]
   ],
   [
@@ -3840,11 +3819,11 @@
     "CONFIG_SOC_PART_NUMBER",
     "n",
     "string",
-    "ESP32C3_WROOM_02_N4",
+    "ESP32_WROVER_E_N4R8",
     "default",
     [
-      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32c3/Kconfig.soc",
-      63
+      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32/Kconfig.soc",
+      164
     ]
   ],
   [
@@ -3854,37 +3833,47 @@
     "y",
     "select",
     [
-      "SOC_SERIES_ESP32C3"
+      "SOC_SERIES_ESP32"
     ]
   ],
   [
-    "CONFIG_SOC_SERIES_ESP32C3",
+    "CONFIG_SOC_SERIES_ESP32",
     "n",
     "bool",
     "y",
     "select",
     [
-      "SOC_ESP32C3"
+      "SOC_ESP32"
     ]
   ],
   [
-    "CONFIG_SOC_ESP32C3_WROOM_02_N4",
+    "CONFIG_SOC_ESP32_WROVER_E_N4R8",
     "n",
     "bool",
     "y",
     "select",
     [
-      "BOARD_ESP32C3_DEVKITC"
+      "BOARD_ESP32_DEVKITC"
     ]
   ],
   [
-    "CONFIG_SOC_ESP32C3",
+    "CONFIG_SOC_ESP32",
     "n",
     "bool",
     "y",
     "select",
     [
-      "SOC_ESP32C3_WROOM_02_N4"
+      "SOC_ESP32_WROVER_E_N4R8"
+    ]
+  ],
+  [
+    "CONFIG_SOC_ESP32_PROCPU",
+    "n",
+    "bool",
+    "y",
+    "select",
+    [
+      "BOARD_ESP32_DEVKITC && BOARD_ESP32_DEVKITC_ESP32_PROCPU"
     ]
   ],
   [
@@ -4041,17 +4030,6 @@
     ]
   ],
   [
-    "CONFIG_ESP_ROM_USB_SERIAL_DEVICE_NUM",
-    "n",
-    "int",
-    "3",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/soc/espressif/common/Kconfig.console",
-      43
-    ]
-  ],
-  [
     "CONFIG_ESP_CONSOLE_UART",
     "n",
     "bool",
@@ -4085,12 +4063,20 @@
     "CONFIG_ESP32_EFUSE_MAX_BLK_LEN",
     "n",
     "int",
-    "256",
+    "192",
     "default",
     [
       "/home/younesam/zephyrproject/zephyr/soc/espressif/common/Kconfig.efuse",
-      45
+      44
     ]
+  ],
+  [
+    "CONFIG_ESP_SPIRAM",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_ESPTOOLPY_FLASHMODE_QIO",
@@ -4153,12 +4139,9 @@
     "CONFIG_ESPTOOLPY_FLASHFREQ_80M",
     "y",
     "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/soc/espressif/common/Kconfig.esptool",
-      90
-    ]
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_ESPTOOLPY_FLASHFREQ_60M",
@@ -4180,9 +4163,12 @@
     "CONFIG_ESPTOOLPY_FLASHFREQ_40M",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "y",
+    "default",
+    [
+      "/home/younesam/zephyrproject/zephyr/soc/espressif/common/Kconfig.esptool",
+      87
+    ]
   ],
   [
     "CONFIG_ESPTOOLPY_FLASHFREQ_26M",
@@ -4201,25 +4187,14 @@
     null
   ],
   [
-    "CONFIG_ESPTOOLPY_FLASHFREQ_80M_DEFAULT",
-    "n",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/soc/espressif/common/Kconfig.esptool",
-      127
-    ]
-  ],
-  [
     "CONFIG_ESPTOOLPY_FLASHFREQ",
     "n",
     "string",
-    "80m",
+    "40m",
     "default",
     [
       "/home/younesam/zephyrproject/zephyr/soc/espressif/common/Kconfig.esptool",
-      136
+      139
     ]
   ],
   [
@@ -4438,23 +4413,17 @@
     "CONFIG_SPI_FLASH_SUPPORT_BOYA_CHIP",
     "y",
     "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/soc/espressif/common/Kconfig.flash",
-      53
-    ]
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_SPI_FLASH_SUPPORT_TH_CHIP",
     "y",
     "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/soc/espressif/common/Kconfig.flash",
-      61
-    ]
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_SPI_FLASH_ROM_DRIVER_PATCH",
@@ -4479,6 +4448,25 @@
     ]
   ],
   [
+    "CONFIG_BOOTLOADER_VDDSDIO_BOOST_1_8V",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_BOOTLOADER_VDDSDIO_BOOST_1_9V",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/younesam/zephyrproject/zephyr/soc/espressif/common/Kconfig.flash",
+      96
+    ]
+  ],
+  [
     "CONFIG_BOOTLOADER_REGION_PROTECTION_ENABLE",
     "y",
     "bool",
@@ -4490,20 +4478,37 @@
     ]
   ],
   [
-    "CONFIG_MAC_BB_PD",
+    "CONFIG_ESP32_BT_RESERVE_DRAM",
     "y",
-    "bool",
-    null,
-    "unset",
-    null
+    "hex",
+    "0xdb5c",
+    "default",
+    [
+      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32/Kconfig",
+      21
+    ]
   ],
   [
-    "CONFIG_SOC_ESP32C3_REV_1_1",
+    "CONFIG_ESP32_REGION_1_NOINIT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "y",
+    "default",
+    [
+      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32/Kconfig",
+      26
+    ]
+  ],
+  [
+    "CONFIG_ESP32_DEEP_SLEEP_WAKEUP_DELAY",
+    "y",
+    "int",
+    "2000",
+    "default",
+    [
+      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32/Kconfig",
+      34
+    ]
   ],
   [
     "CONFIG_ESP_MAC_ADDR_UNIVERSE_WIFI_STA",
@@ -4512,7 +4517,7 @@
     "y",
     "select",
     [
-      "ESP32C3_UNIVERSAL_MAC_ADDRESSES_FOUR && <choice ESP32C3_UNIVERSAL_MAC_ADDRESSES>"
+      "ESP32_UNIVERSAL_MAC_ADDRESSES_FOUR && <choice ESP32_UNIVERSAL_MAC_ADDRESSES>"
     ]
   ],
   [
@@ -4522,7 +4527,7 @@
     "y",
     "select",
     [
-      "ESP32C3_UNIVERSAL_MAC_ADDRESSES_FOUR && <choice ESP32C3_UNIVERSAL_MAC_ADDRESSES>"
+      "ESP32_UNIVERSAL_MAC_ADDRESSES_FOUR && <choice ESP32_UNIVERSAL_MAC_ADDRESSES>"
     ]
   ],
   [
@@ -4532,7 +4537,7 @@
     "y",
     "select",
     [
-      "ESP32C3_UNIVERSAL_MAC_ADDRESSES_FOUR && <choice ESP32C3_UNIVERSAL_MAC_ADDRESSES>"
+      "ESP32_UNIVERSAL_MAC_ADDRESSES_FOUR && <choice ESP32_UNIVERSAL_MAC_ADDRESSES>"
     ]
   ],
   [
@@ -4542,7 +4547,7 @@
     "y",
     "select",
     [
-      "ESP32C3_UNIVERSAL_MAC_ADDRESSES_FOUR && <choice ESP32C3_UNIVERSAL_MAC_ADDRESSES>"
+      "ESP32_UNIVERSAL_MAC_ADDRESSES_FOUR && <choice ESP32_UNIVERSAL_MAC_ADDRESSES>"
     ]
   ],
   [
@@ -4552,11 +4557,11 @@
     "y",
     "select",
     [
-      "ESP32C3_UNIVERSAL_MAC_ADDRESSES_FOUR && <choice ESP32C3_UNIVERSAL_MAC_ADDRESSES>"
+      "ESP32_UNIVERSAL_MAC_ADDRESSES_FOUR && <choice ESP32_UNIVERSAL_MAC_ADDRESSES>"
     ]
   ],
   [
-    "CONFIG_ESP32C3_UNIVERSAL_MAC_ADDRESSES_TWO",
+    "CONFIG_ESP32_UNIVERSAL_MAC_ADDRESSES_TWO",
     "y",
     "bool",
     null,
@@ -4564,25 +4569,25 @@
     null
   ],
   [
-    "CONFIG_ESP32C3_UNIVERSAL_MAC_ADDRESSES_FOUR",
+    "CONFIG_ESP32_UNIVERSAL_MAC_ADDRESSES_FOUR",
     "y",
     "bool",
     "y",
     "default",
     [
-      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32c3/Kconfig.mac",
+      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32/Kconfig.mac",
       8
     ]
   ],
   [
-    "CONFIG_ESP32C3_UNIVERSAL_MAC_ADDRESSES",
+    "CONFIG_ESP32_UNIVERSAL_MAC_ADDRESSES",
     "n",
     "int",
     "4",
     "default",
     [
-      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32c3/Kconfig.mac",
-      46
+      "/home/younesam/zephyrproject/zephyr/soc/espressif/esp32/Kconfig.mac",
+      43
     ]
   ],
   [
@@ -4681,48 +4686,15 @@
     "CONFIG_ARCH",
     "n",
     "string",
-    "riscv",
+    "xtensa",
     "default",
     [
-      "/home/younesam/zephyrproject/zephyr/arch/riscv/Kconfig",
+      "/home/younesam/zephyrproject/zephyr/arch/xtensa/Kconfig",
       10
     ]
   ],
   [
-    "CONFIG_ARCH_HAS_STACKWALK",
-    "n",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/arch/riscv/Kconfig",
-      519
-    ]
-  ],
-  [
-    "CONFIG_RISCV_GP",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/arch/riscv/Kconfig",
-      21
-    ]
-  ],
-  [
-    "CONFIG_RISCV_CMODEL_MEDLOW",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/arch/riscv/Kconfig",
-      61
-    ]
-  ],
-  [
-    "CONFIG_RISCV_CMODEL_MEDANY",
+    "CONFIG_SIMULATOR_XTENSA",
     "y",
     "bool",
     null,
@@ -4730,129 +4702,48 @@
     null
   ],
   [
-    "CONFIG_RISCV_CMODEL_LARGE",
+    "CONFIG_XTENSA_ENABLE_BACKTRACE",
     "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_RISCV_SOC_HAS_GP_RELATIVE_ADDRESSING",
-    "n",
-    "bool",
-    "y",
-    "select",
-    [
-      "SOC_SERIES_ESP32C3 && SOC_FAMILY_ESPRESSIF_ESP32"
-    ]
-  ],
-  [
-    "CONFIG_USE_ISR_WRAPPER",
-    "y",
-    "bool",
-    "y",
-    "select",
-    [
-      "GEN_SW_ISR_TABLE && RISCV"
-    ]
-  ],
-  [
-    "CONFIG_RISCV_HART_MASK",
-    "n",
-    "int",
-    "-1",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/arch/riscv/Kconfig",
-      338
-    ]
-  ],
-  [
-    "CONFIG_EXTRA_EXCEPTION_INFO",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_RISCV_SMRNMI_ENABLE_NMI_DELIVERY",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_ARCH_HAS_SINGLE_THREAD_SUPPORT",
-    "n",
     "bool",
     "y",
     "default",
     [
-      "/home/younesam/zephyrproject/zephyr/arch/riscv/Kconfig",
-      515
+      "/home/younesam/zephyrproject/zephyr/arch/xtensa/Kconfig",
+      34
     ]
   ],
   [
-    "CONFIG_RISCV_ISA_RV32I",
+    "CONFIG_XTENSA_MORE_SPIN_RELAX_NOPS",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_XTENSA_BREAK_ON_UNRECOVERABLE_EXCEPTIONS",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_XTENSA_INTERRUPT_NONPREEMPTABLE",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_XTENSA",
     "n",
     "bool",
     "y",
     "select",
     [
-      "SOC_SERIES_ESP32C3 && SOC_FAMILY_ESPRESSIF_ESP32"
-    ]
-  ],
-  [
-    "CONFIG_RISCV_ISA_EXT_M",
-    "n",
-    "bool",
-    "y",
-    "select",
-    [
-      "SOC_SERIES_ESP32C3 && SOC_FAMILY_ESPRESSIF_ESP32"
-    ]
-  ],
-  [
-    "CONFIG_RISCV_ISA_EXT_C",
-    "n",
-    "bool",
-    "y",
-    "select",
-    [
-      "SOC_SERIES_ESP32C3 && SOC_FAMILY_ESPRESSIF_ESP32"
-    ]
-  ],
-  [
-    "CONFIG_RISCV_ISA_EXT_ZICSR",
-    "n",
-    "bool",
-    "y",
-    "select",
-    [
-      "SOC_SERIES_ESP32C3 && SOC_FAMILY_ESPRESSIF_ESP32"
-    ]
-  ],
-  [
-    "CONFIG_RISCV_ISA_EXT_ZCA",
-    "n",
-    "bool",
-    "y",
-    "select",
-    [
-      "RISCV_ISA_EXT_C && RISCV"
-    ]
-  ],
-  [
-    "CONFIG_RISCV",
-    "n",
-    "bool",
-    "y",
-    "select",
-    [
-      "SOC_SERIES_ESP32C3 && SOC_FAMILY_ESPRESSIF_ESP32"
+      "SOC_SERIES_ESP32 && SOC_FAMILY_ESPRESSIF_ESP32"
     ]
   ],
   [
@@ -4862,7 +4753,7 @@
     "y",
     "select",
     [
-      "RISCV"
+      "XTENSA"
     ]
   ],
   [
@@ -4872,17 +4763,6 @@
     null,
     "unset",
     null
-  ],
-  [
-    "CONFIG_ARCH_SUPPORTS_ROM_OFFSET",
-    "n",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/arch/common/Kconfig",
-      29
-    ]
   ],
   [
     "CONFIG_ARCH_LOG_LEVEL_OFF",
@@ -4961,7 +4841,7 @@
     "CONFIG_SRAM_SIZE",
     "y",
     "int",
-    "384",
+    "128",
     "default",
     [
       "/home/younesam/zephyrproject/zephyr/arch/Kconfig",
@@ -4972,7 +4852,7 @@
     "CONFIG_SRAM_BASE_ADDRESS",
     "y",
     "hex",
-    "0x3fc80000",
+    "0x3ffe0000",
     "default",
     [
       "/home/younesam/zephyrproject/zephyr/arch/Kconfig",
@@ -5002,28 +4882,6 @@
     null,
     "unset",
     null
-  ],
-  [
-    "CONFIG_ARCH_STACKWALK",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/arch/Kconfig",
-      446
-    ]
-  ],
-  [
-    "CONFIG_ARCH_STACKWALK_MAX_FRAMES",
-    "y",
-    "int",
-    "8",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/arch/Kconfig",
-      453
-    ]
   ],
   [
     "CONFIG_ARCH_DEVICE_STATE_ALIGN",
@@ -5066,12 +4924,14 @@
     null
   ],
   [
-    "CONFIG_EMPTY_IRQ_SPURIOUS",
-    "y",
+    "CONFIG_ARCH_HAS_TIMING_FUNCTIONS",
+    "n",
     "bool",
-    null,
-    "unset",
-    null
+    "y",
+    "select",
+    [
+      "XTENSA"
+    ]
   ],
   [
     "CONFIG_ARCH_SUPPORTS_COREDUMP",
@@ -5080,37 +4940,27 @@
     "y",
     "select",
     [
-      "RISCV"
+      "SOC_SERIES_ESP32 && SOC_FAMILY_ESPRESSIF_ESP32"
     ]
   ],
   [
-    "CONFIG_ARCH_SUPPORTS_COREDUMP_PRIV_STACKS",
+    "CONFIG_ARCH_SUPPORTS_COREDUMP_STACK_PTR",
     "n",
     "bool",
     "y",
     "select",
     [
-      "RISCV"
+      "XTENSA && !SMP"
     ]
   ],
   [
-    "CONFIG_ARCH_SUPPORTS_EMPTY_IRQ_SPURIOUS",
+    "CONFIG_ARCH_HAS_GDBSTUB",
     "n",
     "bool",
     "y",
     "select",
     [
-      "RISCV"
-    ]
-  ],
-  [
-    "CONFIG_ARCH_HAS_THREAD_LOCAL_STORAGE",
-    "n",
-    "bool",
-    "y",
-    "select",
-    [
-      "RISCV"
+      "SOC_SERIES_ESP32 && SOC_FAMILY_ESPRESSIF_ESP32"
     ]
   ],
   [
@@ -5120,7 +4970,17 @@
     "y",
     "select",
     [
-      "RISCV"
+      "XTENSA"
+    ]
+  ],
+  [
+    "CONFIG_CPU_HAS_FPU",
+    "n",
+    "bool",
+    "y",
+    "select",
+    [
+      "SOC_SERIES_ESP32 && SOC_FAMILY_ESPRESSIF_ESP32"
     ]
   ],
   [
@@ -5130,7 +4990,7 @@
     "y",
     "select",
     [
-      "RISCV"
+      "XTENSA"
     ]
   ],
   [
@@ -5274,9 +5134,9 @@
     "y",
     "bool",
     "y",
-    "imply",
+    "select",
     [
-      "ARCH_HAS_STACKWALK && RISCV"
+      "XTENSA"
     ]
   ],
   [
@@ -5358,16 +5218,6 @@
     ]
   ],
   [
-    "CONFIG_LIBC_ERRNO",
-    "n",
-    "bool",
-    "y",
-    "select",
-    [
-      "PICOLIBC && THREAD_LOCAL_STORAGE && PICOLIBC_SUPPORTED && <choice LIBC_IMPLEMENTATION>"
-    ]
-  ],
-  [
     "CONFIG_ERRNO",
     "y",
     "bool",
@@ -5376,17 +5226,6 @@
     [
       "/home/younesam/zephyrproject/zephyr/kernel/Kconfig",
       406
-    ]
-  ],
-  [
-    "CONFIG_CURRENT_THREAD_USE_TLS",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/kernel/Kconfig",
-      430
     ]
   ],
   [
@@ -5501,13 +5340,13 @@
     ]
   ],
   [
-    "CONFIG_BARRIER_OPERATIONS_BUILTIN",
+    "CONFIG_ATOMIC_OPERATIONS_BUILTIN",
     "n",
     "bool",
     "y",
     "select",
     [
-      "RISCV"
+      "SOC_SERIES_ESP32 && SOC_FAMILY_ESPRESSIF_ESP32"
     ]
   ],
   [
@@ -5643,7 +5482,7 @@
     "y",
     "select",
     [
-      "RISCV"
+      "XTENSA"
     ]
   ],
   [
@@ -5653,7 +5492,7 @@
     "y",
     "select",
     [
-      "RISCV"
+      "XTENSA"
     ]
   ],
   [
@@ -5672,16 +5511,6 @@
     "select",
     [
       "TOOLCHAIN_ZEPHYR_SUPPORTS_THREAD_LOCAL_STORAGE"
-    ]
-  ],
-  [
-    "CONFIG_THREAD_LOCAL_STORAGE",
-    "y",
-    "bool",
-    "y",
-    "select",
-    [
-      "PICOLIBC_USE_TOOLCHAIN && ARCH_HAS_THREAD_LOCAL_STORAGE && TOOLCHAIN_SUPPORTS_THREAD_LOCAL_STORAGE && y = y && <choice PICOLIBC_SOURCE>"
     ]
   ],
   [
@@ -6472,8 +6301,8 @@
     "y",
     "assign",
     [
-      "/home/younesam/zephyrproject/zephyr/boards/espressif/esp32c3_devkitc/esp32c3_devkitc_defconfig",
-      5
+      "/home/younesam/zephyrproject/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu_defconfig",
+      6
     ]
   ],
   [
@@ -7173,7 +7002,7 @@
     "y",
     "select",
     [
-      "SOC_SERIES_ESP32C3 && SOC_FAMILY_ESPRESSIF_ESP32"
+      "SOC_SERIES_ESP32 && SOC_FAMILY_ESPRESSIF_ESP32"
     ]
   ],
   [
@@ -7360,18 +7189,7 @@
     "y",
     "select",
     [
-      "UART_ESP32 && DT_HAS_ESPRESSIF_ESP32_UART_ENABLED && SERIAL",
-      "SERIAL_ESP32_USB && DT_HAS_ESPRESSIF_ESP32_USB_SERIAL_ENABLED && SERIAL"
-    ]
-  ],
-  [
-    "CONFIG_SERIAL_SUPPORT_ASYNC",
-    "n",
-    "bool",
-    "y",
-    "select",
-    [
-      "UART_ESP32 && (SOC_SERIES_ESP32C3 || SOC_SERIES_ESP32C6 || SOC_SERIES_ESP32H2 || SOC_SERIES_ESP32S3) && DT_HAS_ESPRESSIF_ESP32_UART_ENABLED && SERIAL"
+      "UART_ESP32 && DT_HAS_ESPRESSIF_ESP32_UART_ENABLED && SERIAL"
     ]
   ],
   [
@@ -7381,8 +7199,7 @@
     "y",
     "select",
     [
-      "UART_ESP32 && DT_HAS_ESPRESSIF_ESP32_UART_ENABLED && SERIAL",
-      "SERIAL_ESP32_USB && DT_HAS_ESPRESSIF_ESP32_USB_SERIAL_ENABLED && SERIAL"
+      "UART_ESP32 && DT_HAS_ESPRESSIF_ESP32_UART_ENABLED && SERIAL"
     ]
   ],
   [
@@ -7459,14 +7276,6 @@
     ]
   ],
   [
-    "CONFIG_UART_ASYNC_API",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
     "CONFIG_UART_LINE_CTRL",
     "y",
     "bool",
@@ -7518,17 +7327,6 @@
     ]
   ],
   [
-    "CONFIG_SERIAL_ESP32_USB",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/drivers/serial/Kconfig.esp32",
-      18
-    ]
-  ],
-  [
     "CONFIG_UART_ESP32_TX_FIFO_THRESH",
     "y",
     "hex",
@@ -7575,16 +7373,6 @@
     null
   ],
   [
-    "CONFIG_TIMER_HAS_64BIT_CYCLE_COUNTER",
-    "n",
-    "bool",
-    "y",
-    "select",
-    [
-      "ESP32_SYS_TIMER && (SOC_SERIES_ESP32C2 || SOC_SERIES_ESP32C3 || (SOC_SERIES_ESP32C6 && !SOC_ESP32C6_LPCORE) || SOC_SERIES_ESP32H2) && SYS_CLOCK_EXISTS"
-    ]
-  ],
-  [
     "CONFIG_TIMER_READS_ITS_FREQUENCY_AT_RUNTIME",
     "y",
     "bool",
@@ -7618,18 +7406,7 @@
     "y",
     "select",
     [
-      "ESP32_SYS_TIMER && (SOC_SERIES_ESP32C2 || SOC_SERIES_ESP32C3 || (SOC_SERIES_ESP32C6 && !SOC_ESP32C6_LPCORE) || SOC_SERIES_ESP32H2) && SYS_CLOCK_EXISTS"
-    ]
-  ],
-  [
-    "CONFIG_ESP32_SYS_TIMER",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/drivers/timer/Kconfig.esp32",
-      11
+      "XTENSA_TIMER && XTENSA && SYS_CLOCK_EXISTS"
     ]
   ],
   [
@@ -7838,16 +7615,6 @@
     null,
     "unset",
     null
-  ],
-  [
-    "CONFIG_HAS_NEWLIB_LIBC_NANO",
-    "n",
-    "bool",
-    "y",
-    "select",
-    [
-      "TOOLCHAIN_ZEPHYR_0_17 && !XTENSA"
-    ]
   ],
   [
     "CONFIG_COMMON_LIBC_ABORT",
@@ -8067,9 +7834,12 @@
     "CONFIG_SYS_HEAP_SMALL_ONLY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "y",
+    "default",
+    [
+      "/home/younesam/zephyrproject/zephyr/lib/heap/Kconfig",
+      84
+    ]
   ],
   [
     "CONFIG_SYS_HEAP_BIG_ONLY",
@@ -8083,12 +7853,9 @@
     "CONFIG_SYS_HEAP_AUTO",
     "y",
     "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/lib/heap/Kconfig",
-      85
-    ]
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_MULTI_HEAP",
@@ -8281,7 +8048,7 @@
     "y",
     "select",
     [
-      "SOC_SERIES_ESP32C3 && SOC_FAMILY_ESPRESSIF_ESP32"
+      "SOC_SERIES_ESP32 && SOC_FAMILY_ESPRESSIF_ESP32"
     ]
   ],
   [
@@ -8827,14 +8594,6 @@
     ]
   ],
   [
-    "CONFIG_BT_EXT_ADV",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
     "CONFIG_BT_BUF_ACL_RX_COUNT_EXTRA",
     "n",
     "int",
@@ -9180,16 +8939,6 @@
     null
   ],
   [
-    "CONFIG_BT_CTLR_EXT_REJ_IND_SUPPORT",
-    "n",
-    "bool",
-    "y",
-    "select",
-    [
-      "BT_ESP32 && !SOC_SERIES_ESP32 && DT_HAS_ESPRESSIF_ESP32_BT_HCI_ENABLED && (ZEPHYR_HAL_ESPRESSIF_MODULE_BLOBS || BUILD_ONLY_NO_BLOBS) && BT_HCI && BT_DRIVERS"
-    ]
-  ],
-  [
     "CONFIG_BT_CTLR_DATA_LEN_UPDATE_SUPPORT",
     "n",
     "bool",
@@ -9217,46 +8966,6 @@
     "select",
     [
       "BT_ESP32 && DT_HAS_ESPRESSIF_ESP32_BT_HCI_ENABLED && (ZEPHYR_HAL_ESPRESSIF_MODULE_BLOBS || BUILD_ONLY_NO_BLOBS) && BT_HCI && BT_DRIVERS"
-    ]
-  ],
-  [
-    "CONFIG_BT_CTLR_PHY_UPDATE_SUPPORT",
-    "n",
-    "bool",
-    "y",
-    "select",
-    [
-      "BT_ESP32 && !SOC_SERIES_ESP32 && DT_HAS_ESPRESSIF_ESP32_BT_HCI_ENABLED && (ZEPHYR_HAL_ESPRESSIF_MODULE_BLOBS || BUILD_ONLY_NO_BLOBS) && BT_HCI && BT_DRIVERS"
-    ]
-  ],
-  [
-    "CONFIG_BT_CTLR_PHY_2M_SUPPORT",
-    "n",
-    "bool",
-    "y",
-    "select",
-    [
-      "BT_ESP32 && !SOC_SERIES_ESP32 && DT_HAS_ESPRESSIF_ESP32_BT_HCI_ENABLED && (ZEPHYR_HAL_ESPRESSIF_MODULE_BLOBS || BUILD_ONLY_NO_BLOBS) && BT_HCI && BT_DRIVERS"
-    ]
-  ],
-  [
-    "CONFIG_BT_CTLR_ADV_EXT_SUPPORT",
-    "n",
-    "bool",
-    "y",
-    "select",
-    [
-      "BT_ESP32 && !SOC_SERIES_ESP32 && DT_HAS_ESPRESSIF_ESP32_BT_HCI_ENABLED && (ZEPHYR_HAL_ESPRESSIF_MODULE_BLOBS || BUILD_ONLY_NO_BLOBS) && BT_HCI && BT_DRIVERS"
-    ]
-  ],
-  [
-    "CONFIG_BT_CTLR_CHAN_SEL_2_SUPPORT",
-    "n",
-    "bool",
-    "y",
-    "select",
-    [
-      "BT_ESP32 && !SOC_SERIES_ESP32 && DT_HAS_ESPRESSIF_ESP32_BT_HCI_ENABLED && (ZEPHYR_HAL_ESPRESSIF_MODULE_BLOBS || BUILD_ONLY_NO_BLOBS) && BT_HCI && BT_DRIVERS"
     ]
   ],
   [
@@ -9502,14 +9211,6 @@
       "/home/younesam/zephyrproject/zephyr/subsys/bluetooth/controller/Kconfig",
       709
     ]
-  ],
-  [
-    "CONFIG_BT_CTLR_ADV_EXT",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
   ],
   [
     "CONFIG_BT_CTLR_SET_HOST_FEATURE",
@@ -10358,17 +10059,6 @@
     null
   ],
   [
-    "CONFIG_EXCEPTION_STACK_TRACE",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/subsys/debug/Kconfig",
-      309
-    ]
-  ],
-  [
     "CONFIG_DEBUG_THREAD_INFO",
     "y",
     "bool",
@@ -10393,6 +10083,14 @@
     null
   ],
   [
+    "CONFIG_GDBSTUB",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
     "CONFIG_MIPI_STP_DECODER",
     "y",
     "bool",
@@ -10402,14 +10100,6 @@
   ],
   [
     "CONFIG_CS_TRACE_DEFMT",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_CPU_LOAD",
     "y",
     "bool",
     null,
@@ -11219,7 +10909,7 @@
     "y",
     "select",
     [
-      "SOC_SERIES_ESP32C3 && SOC_FAMILY_ESPRESSIF_ESP32"
+      "SOC_SERIES_ESP32 && SOC_FAMILY_ESPRESSIF_ESP32"
     ]
   ],
   [
@@ -11689,28 +11379,6 @@
     ]
   ],
   [
-    "CONFIG_LINKER_LAST_SECTION_ID",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/Kconfig.zephyr",
-      286
-    ]
-  ],
-  [
-    "CONFIG_LINKER_LAST_SECTION_ID_PATTERN",
-    "y",
-    "hex",
-    "0xE015E015",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/Kconfig.zephyr",
-      302
-    ]
-  ],
-  [
     "CONFIG_LINKER_ITERABLE_SUBALIGN",
     "n",
     "int",
@@ -11720,25 +11388,6 @@
       "/home/younesam/zephyrproject/zephyr/Kconfig.zephyr",
       332
     ]
-  ],
-  [
-    "CONFIG_LINKER_DEVNULL_SUPPORT",
-    "n",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/younesam/zephyrproject/zephyr/Kconfig.zephyr",
-      338
-    ]
-  ],
-  [
-    "CONFIG_LINKER_DEVNULL_MEMORY",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
   ],
   [
     "CONFIG_STD_C90",

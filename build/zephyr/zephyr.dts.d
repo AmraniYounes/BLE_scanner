@@ -1,9 +1,11 @@
 empty_file.o: /home/younesam/zephyrproject/zephyr/misc/empty_file.c \
- /home/younesam/zephyrproject/zephyr/boards/espressif/esp32c3_devkitc/esp32c3_devkitc.dts \
- /home/younesam/zephyrproject/zephyr/dts/riscv/espressif/esp32c3/esp32c3_wroom_n4.dtsi \
- /home/younesam/zephyrproject/zephyr/dts/riscv/espressif/esp32c3/esp32c3_common.dtsi \
+ /home/younesam/zephyrproject/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu.dts \
+ /home/younesam/zephyrproject/zephyr/dts/xtensa/espressif/esp32/esp32_wrover_e_n4r8.dtsi \
+ /home/younesam/zephyrproject/zephyr/dts/xtensa/espressif/esp32/esp32_common.dtsi \
  /home/younesam/zephyrproject/zephyr/dts/common/mem.h \
  /home/younesam/zephyrproject/zephyr/dts/common/freq.h \
+ /home/younesam/zephyrproject/zephyr/dts/xtensa/xtensa.dtsi \
+ /home/younesam/zephyrproject/zephyr/dts/common/skeleton.dtsi \
  /home/younesam/zephyrproject/zephyr/include/zephyr/dt-bindings/adc/adc.h \
  /home/younesam/zephyrproject/zephyr/include/zephyr/dt-bindings/dt-util.h \
  /home/younesam/zephyrproject/zephyr/include/zephyr/sys/util_macro.h \
@@ -16,13 +18,14 @@ empty_file.o: /home/younesam/zephyrproject/zephyr/misc/empty_file.c \
  /home/younesam/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_x2.h \
  /home/younesam/zephyrproject/zephyr/include/zephyr/dt-bindings/gpio/gpio.h \
  /home/younesam/zephyrproject/zephyr/include/zephyr/dt-bindings/i2c/i2c.h \
- /home/younesam/zephyrproject/zephyr/include/zephyr/dt-bindings/interrupt-controller/esp-esp32c3-intmux.h \
- /home/younesam/zephyrproject/zephyr/include/zephyr/dt-bindings/clock/esp32c3_clock.h \
+ /home/younesam/zephyrproject/zephyr/include/zephyr/dt-bindings/clock/esp32_clock.h \
+ /home/younesam/zephyrproject/zephyr/include/zephyr/dt-bindings/interrupt-controller/esp-xtensa-intmux.h \
  /home/younesam/zephyrproject/zephyr/include/zephyr/dt-bindings/pinctrl/esp32-pinctrl.h \
- /home/younesam/zephyrproject/zephyr/boards/espressif/esp32c3_devkitc/esp32c3_devkitc-pinctrl.dtsi \
+ /home/younesam/zephyrproject/zephyr/include/zephyr/dt-bindings/pwm/pwm.h \
+ /home/younesam/zephyrproject/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc-pinctrl.dtsi \
  /home/younesam/zephyrproject/zephyr/include/zephyr/dt-bindings/pinctrl/esp-pinctrl-common.h \
- /home/younesam/zephyrproject/zephyr/include/zephyr/dt-bindings/pinctrl/esp32c3-pinctrl.h \
- /home/younesam/zephyrproject/zephyr/include/zephyr/dt-bindings/pinctrl/esp32c3-gpio-sigmap.h \
+ /home/younesam/zephyrproject/zephyr/include/zephyr/dt-bindings/pinctrl/esp32-gpio-sigmap.h \
  /home/younesam/zephyrproject/zephyr/include/zephyr/dt-bindings/input/input-event-codes.h \
- /home/younesam/zephyrproject/zephyr/dts/vendor/espressif/partitions_0x0_default.dtsi \
- /home/younesam/zephyrproject/zephyr/dts/vendor/espressif/partitions_0x0_default_4M.dtsi
+ /home/younesam/zephyrproject/zephyr/include/zephyr/dt-bindings/input/esp32-touch-sensor-input.h \
+ /home/younesam/zephyrproject/zephyr/dts/vendor/espressif/partitions_0x1000_amp.dtsi \
+ /home/younesam/zephyrproject/zephyr/dts/vendor/espressif/partitions_0x1000_amp_4M.dtsi

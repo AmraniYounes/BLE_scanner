@@ -1,10 +1,10 @@
 [
     [
         [
-            "void user_fault",
+            "void xtensa_user_fault",
             "unsigned int reason"
         ],
-        "error.h",
+        "arch.h",
         true
     ],
     [
@@ -1265,82 +1265,10 @@
     ],
     [
         [
-            "bool atomic_cas",
-            "atomic_t *target, atomic_val_t old_value,\n\t\t\t atomic_val_t new_value"
+            "int *z_errno",
+            "void"
         ],
-        "atomic_c.h",
-        true
-    ],
-    [
-        [
-            "bool atomic_ptr_cas",
-            "atomic_ptr_t *target, atomic_ptr_val_t old_value,\n\t\t\t      atomic_ptr_val_t new_value"
-        ],
-        "atomic_c.h",
-        true
-    ],
-    [
-        [
-            "atomic_val_t atomic_add",
-            "atomic_t *target, atomic_val_t value"
-        ],
-        "atomic_c.h",
-        true
-    ],
-    [
-        [
-            "atomic_val_t atomic_sub",
-            "atomic_t *target, atomic_val_t value"
-        ],
-        "atomic_c.h",
-        true
-    ],
-    [
-        [
-            "atomic_val_t atomic_set",
-            "atomic_t *target, atomic_val_t value"
-        ],
-        "atomic_c.h",
-        true
-    ],
-    [
-        [
-            "atomic_ptr_val_t atomic_ptr_set",
-            "atomic_ptr_t *target, atomic_ptr_val_t value"
-        ],
-        "atomic_c.h",
-        true
-    ],
-    [
-        [
-            "atomic_val_t atomic_or",
-            "atomic_t *target, atomic_val_t value"
-        ],
-        "atomic_c.h",
-        true
-    ],
-    [
-        [
-            "atomic_val_t atomic_xor",
-            "atomic_t *target, atomic_val_t value"
-        ],
-        "atomic_c.h",
-        true
-    ],
-    [
-        [
-            "atomic_val_t atomic_and",
-            "atomic_t *target, atomic_val_t value"
-        ],
-        "atomic_c.h",
-        true
-    ],
-    [
-        [
-            "atomic_val_t atomic_nand",
-            "atomic_t *target, atomic_val_t value"
-        ],
-        "atomic_c.h",
+        "errno_private.h",
         true
     ],
     [
@@ -1369,10 +1297,10 @@
     ],
     [
         [
-            "void xtensa_user_fault",
+            "void user_fault",
             "unsigned int reason"
         ],
-        "arch.h",
+        "error.h",
         false
     ],
     [
@@ -4633,10 +4561,82 @@
     ],
     [
         [
-            "int *z_errno",
-            "void"
+            "bool atomic_cas",
+            "atomic_t *target, atomic_val_t old_value,\n\t\t\t atomic_val_t new_value"
         ],
-        "errno_private.h",
+        "atomic_c.h",
+        false
+    ],
+    [
+        [
+            "bool atomic_ptr_cas",
+            "atomic_ptr_t *target, atomic_ptr_val_t old_value,\n\t\t\t      atomic_ptr_val_t new_value"
+        ],
+        "atomic_c.h",
+        false
+    ],
+    [
+        [
+            "atomic_val_t atomic_add",
+            "atomic_t *target, atomic_val_t value"
+        ],
+        "atomic_c.h",
+        false
+    ],
+    [
+        [
+            "atomic_val_t atomic_sub",
+            "atomic_t *target, atomic_val_t value"
+        ],
+        "atomic_c.h",
+        false
+    ],
+    [
+        [
+            "atomic_val_t atomic_set",
+            "atomic_t *target, atomic_val_t value"
+        ],
+        "atomic_c.h",
+        false
+    ],
+    [
+        [
+            "atomic_ptr_val_t atomic_ptr_set",
+            "atomic_ptr_t *target, atomic_ptr_val_t value"
+        ],
+        "atomic_c.h",
+        false
+    ],
+    [
+        [
+            "atomic_val_t atomic_or",
+            "atomic_t *target, atomic_val_t value"
+        ],
+        "atomic_c.h",
+        false
+    ],
+    [
+        [
+            "atomic_val_t atomic_xor",
+            "atomic_t *target, atomic_val_t value"
+        ],
+        "atomic_c.h",
+        false
+    ],
+    [
+        [
+            "atomic_val_t atomic_and",
+            "atomic_t *target, atomic_val_t value"
+        ],
+        "atomic_c.h",
+        false
+    ],
+    [
+        [
+            "atomic_val_t atomic_nand",
+            "atomic_t *target, atomic_val_t value"
+        ],
+        "atomic_c.h",
         false
     ],
     [

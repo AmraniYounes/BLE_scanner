@@ -34,11 +34,11 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/younesam/zephyr-sdk-0.17.4/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-objdump")
+  set(CMAKE_OBJDUMP "/home/younesam/zephyr-sdk-0.17.4/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/younesam/zephyrproject/BLE_scanner/build/modules/hal_espressif/esp32c3/cmake_install.cmake")
+  include("/home/younesam/zephyrproject/BLE_scanner/build/modules/hal_espressif/esp32/cmake_install.cmake")
 endif()
 

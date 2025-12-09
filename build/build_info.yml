@@ -3,16 +3,16 @@ cmake:
     configuration-dir: '/home/younesam/zephyrproject/BLE_scanner'
     source-dir: '/home/younesam/zephyrproject/BLE_scanner'
   board:
-    name: 'esp32c3_devkitc'
+    name: 'esp32_devkitc'
     path:
-     - '/home/younesam/zephyrproject/zephyr/boards/espressif/esp32c3_devkitc'
-    qualifiers: 'esp32c3'
+     - '/home/younesam/zephyrproject/zephyr/boards/espressif/esp32_devkitc'
+    qualifiers: 'esp32/procpu'
     revision: ''
   devicetree:
     bindings-dirs:
      - '/home/younesam/zephyrproject/zephyr/dts/bindings'
     files:
-     - '/home/younesam/zephyrproject/zephyr/boards/espressif/esp32c3_devkitc/esp32c3_devkitc.dts'
+     - '/home/younesam/zephyrproject/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu.dts'
     include-dirs:
      - '/home/younesam/zephyrproject/modules/hal/ambiq/dts'
      - '/home/younesam/zephyrproject/modules/hal/atmel/include'
@@ -41,7 +41,7 @@ cmake:
      - '/home/younesam/zephyrproject/zephyr/dts'
   kconfig:
     files:
-     - '/home/younesam/zephyrproject/zephyr/boards/espressif/esp32c3_devkitc/esp32c3_devkitc_defconfig'
+     - '/home/younesam/zephyrproject/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu_defconfig'
      - '/home/younesam/zephyrproject/BLE_scanner/prj.conf'
     user-files:
      - '/home/younesam/zephyrproject/BLE_scanner/prj.conf'
@@ -53,6 +53,6 @@ cmake:
     zephyr-base: '/home/younesam/zephyrproject/zephyr'
 version: '0.1.0'
 west:
-  command: '/home/younesam/.local/bin/west build -b esp32c3_devkitc .'
+  command: '/home/younesam/.local/bin/west build -b esp32_devkitc/esp32/procpu --pristine'
   topdir: '/home/younesam/zephyrproject'
   version: '1.5.0'
