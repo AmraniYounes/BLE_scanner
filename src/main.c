@@ -1,8 +1,9 @@
 #include <zephyr/sys/printk.h>
 #include <zephyr/bluetooth/bluetooth.h>
+#include <zephyr/bluetooth/addr.h>
 
 
-static void init_callback(int err);
+// static void init_callback(int err);
 static void scan_callback(const bt_addr_le_t *, int8_t,
                           uint8_t, struct net_buf_simple *);
 
@@ -14,16 +15,10 @@ const struct bt_le_scan_param scan_params = {
 	.window     = 0x0010,
 };
 
-static uint8_t mfg_data[] = { 0xff, 0xff, 0x00 };
-static const struct bt_data ad[] = {
-	BT_DATA(BT_DATA_MANUFACTURER_DATA, mfg_data, 3),
-};
+
 
 int main(void)
 {
-    // Set public address for Bluetooth controller
-    const uint8_t public_address[6] = {0xFF, 0xFF, 0xFF, 0x00, 0xEE, 0xEE};
-    bt_ctlr_set_public_addr(public_address);	
 
     // init BLE
     int err = bt_enable(NULL);
@@ -35,17 +30,25 @@ int main(void)
     
 
     err = bt_le_scan_start(&scan_params, scan_callback);
-    if(err)
+    if (err)
     {
-        printk("Scanning failed (error code: %d)\n", err);
-        return -1;
+        printk("Scan start failed (%d)\n", err);
+    }
+    else
+    {
+        printk("Scanning started\n");
     }
 
     
 
     // 2nd task: log device data
-    // make sure then scan and log are periodic
-    // deinit the BLE when a button is pressed on the esp32
+    // make sure that scan and log are periodic
+    // myb add a task to parse the adv packets on a thread while the other app logic runs on another thread
+    // disable the BLE when a button is pressed on the esp32
+    while (1)
+    {
+        k_sleep(K_SECONDS(10));
+    }
 
     return 0;
 }
@@ -53,8 +56,14 @@ int main(void)
 
 
 
-static void scan_callback(const bt_addr_le_t *public_address, int8_t rssi, uint8_t adv_type
+static void scan_callback(const bt_addr_le_t *addr, int8_t rssi, uint8_t adv_type
                                                                 , struct net_buf_simple *buf)
 {
-    mfg_data[2]++;
+
+    char addr_str[BT_ADDR_LE_STR_LEN];
+
+    bt_addr_le_to_str(addr, addr_str, sizeof(addr_str));
+
+    printk("Device: %s | RSSI: %d dBm | Type: %u | Data len: %u\n",
+           addr_str, rssi, adv_type, buf->len);
 }
